@@ -1,0 +1,4 @@
+func main() {}
+// declare function twice
+func first() {}
+func first(a,b,c,d) {}

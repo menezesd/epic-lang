@@ -1,0 +1,14 @@
+func main(){
+    print(C(5, 3));
+    print(C(7, 2));
+    print(C(14, 6));
+    print F(8);
+}
+func C(n, k){return F(n)/(F(n-k)*F(k));}
+func F(n){
+    res=1;
+    for i in 1..n+1 do{
+        res=res*i;
+    }
+    return res;
+}

@@ -1,0 +1,35 @@
+func do(x, y) {
+    return x*y*2;
+}
+
+func main() {
+    print [];
+    print [1,2,3];
+    print [1,[2],[[3]]];
+    print len([]);
+    print len([1,[2],[[3]]]);
+    print ([1]+[2])+[3,4];
+    print len([1,2])+len([3,4]);
+    print len([([]),([([])])]);
+    print [1,4,2,8,5,7][2];
+    x = [1,4,2,8,5,7];
+    print[x[1],x[3],x[5]];
+    print x[4];
+    m = [[1,4][2,8][5,7]];
+    print m[0][1];
+    print -m[0][1];
+    print -(m[0])[1];
+    print [2+2,true|false,4==5,x+m];
+    print x+m+x;
+    print len(x+m+x);
+    do = 42;
+    print do;
+    print do(3,4)+do;
+    print [do(1,2), do(5, 6), do];
+    print do(3,4)==24;
+    print ![true,false,true][1];
+    print -[43,531,54][1];
+    v = 5;
+    print v;
+    print [v*2,v==v,v!=v];
+}

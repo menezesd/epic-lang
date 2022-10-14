@@ -1,0 +1,30 @@
+func main() {
+    first();
+    x = 1;
+    {
+        x = 4;
+        print x;
+        u = 8;
+    }
+    print x;
+    print u;
+
+    for i in 1..3 do {
+        x = x + 1;
+        print x;
+        u = 9;
+    }
+    print x;
+    print u;
+}
+
+func first() {
+    x = 5;
+    second();
+    print x;
+}
+
+func second() {
+    x = 1;
+    print x;
+}

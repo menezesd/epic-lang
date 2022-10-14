@@ -1,0 +1,4 @@
+func main() {
+    // print cannot be used as expression!
+    print (print 42);
+}

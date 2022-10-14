@@ -1,0 +1,24 @@
+func main() {
+    count = 500;
+
+    is_prime = [false, false];
+    while len(is_prime) < count do
+        is_prime = is_prime + [true];
+
+    for i in 2..count do {
+        if !is_prime[i] then continue;
+        j = i*i;
+        while j < count do {
+            is_prime[j] = false;
+            j = j + i;
+        }
+    }
+
+    primes = [];
+    for i in 0..count do {
+        if is_prime[i] then
+            primes = primes + [i];
+    }
+
+    print(primes);
+}

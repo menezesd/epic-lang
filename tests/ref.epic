@@ -1,0 +1,8 @@
+func main() {
+    a = [1,2,3];
+    print a; // prints [1,2,3]
+    b = a;
+    a[1] = 4;
+    print a; // prints [1,4,3]
+    print b; // also prints [1,4,3], as `a` and `b` refer to the same list
+}

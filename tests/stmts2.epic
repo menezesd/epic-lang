@@ -1,0 +1,61 @@
+func main() {
+    x = 5;
+    i = -1;
+    for i in x..x*2 do print [41,i];
+    print i; // must be -1 again
+    y = 0;
+    for i in x..x*2 do {
+        print [42,i];
+        print [i,43];
+        y = y + 1;
+    }
+    print y;
+    
+    for i in 1..2 do
+        print [44,i];
+    for i in -8..0 do
+        print [45,i];    
+    for i in 10..10 do
+        print [46,i];    
+    for i in 10..1 do
+        print [47,i];
+
+    i0 = 15793317597137;
+    while i0 != 0 do {
+        print [48,i0,i0%2];
+        i0 = i0/2;
+    }
+    while i0 != 42 do i0 = i0+1;
+    print i0;
+    while i0 != 44 do
+    {
+        i0 = i0+1;
+    }
+    print i0;
+
+    for i in 0..10 do helper(i);
+    for i in 0..10 do helper2(i);
+}
+
+func helper(x) {
+    if x%3 == 0 then print [100,x];
+    if x%2 == 0 then {
+        print [[x]];
+    } else {
+        print [[[x]]];
+    }
+    if x%2 == 0 then print [[x]]; else print [[[x]]];
+}
+
+func helper2(x) {
+    if x%3 == 0 then print[200,x];
+    else if x%3 ==1 then print[201,x];
+    else print[202,x];
+    if x%3 == 0 then {
+        print[200,x];
+    } else if x%3 ==1 then {
+        print[201,x];
+    } else {
+        print[202,x];
+    }
+}

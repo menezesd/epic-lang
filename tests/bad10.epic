@@ -1,0 +1,4 @@
+func main() {
+    // bad condition in "if"
+    if [42] then {}
+}

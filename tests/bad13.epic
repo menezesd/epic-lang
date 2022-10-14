@@ -1,0 +1,4 @@
+func main() {
+    // try to print undeclared variable
+    print undeclared;
+}

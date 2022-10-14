@@ -1,0 +1,4 @@
+func main() {
+    // break outside of loop?
+    if true then break;
+}

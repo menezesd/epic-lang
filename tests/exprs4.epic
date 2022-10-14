@@ -1,0 +1,16 @@
+func main() {
+    for i in 0..2 do {
+        for j in 0..2 do {
+            for k in 0..2 do {
+                x = i==1;
+                y = j==1;
+                z = k==1;
+                print x<y<z;
+                print x<=y<=z;
+                print x&y|z;
+                print x|y&z;
+                print x==y==z;
+            }
+        }
+    }
+}

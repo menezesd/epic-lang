@@ -1,0 +1,4 @@
+func main() {
+    // bad condition in "while"
+    while [42] do {}
+}

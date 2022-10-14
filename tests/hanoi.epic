@@ -1,0 +1,10 @@
+ func hanoi(count, from, to, tmp) {
+    if count == 0 then return;
+    hanoi(count - 1, from, tmp, to); // clear `from`
+    print [count, from, to];
+    hanoi(count - 1, tmp, to, from); // move the rest of the tower to `to`
+ }
+ 
+ func main() {
+    hanoi(7, 1, 3, 2);
+ }

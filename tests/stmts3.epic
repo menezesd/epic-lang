@@ -1,0 +1,87 @@
+func main() {
+    for i in 1..10 do {
+        for j in 1..10 do {
+            if i+j == 12 then break;
+            print [i,j];
+        }
+    }
+
+    print none;
+
+    for i in 1..10 do {
+        for j in 1..10 do {
+            if i+j == 12 then continue;
+            print [i,j];
+        }
+    }
+
+    print none;
+
+    for i in 1..10 do {
+        for j in 1..10 do {
+            if i+j == 12 then if true then {{{ break; }}}
+            print [i,j];
+        }
+    }
+
+    print none;
+
+    for i in 1..10 do {
+        for j in 1..10 do {
+            if i+j == 12 then if true then {{{ continue; }}}
+            print [i,j];
+        }
+    }
+
+    print none;
+
+    i = 0;
+    while i < 10 do {
+        j = 0;
+        while j < 10 do {
+            if i+j == 12 then break;
+            print [i,j];
+            j=j+1;
+        }
+        i=i+1;
+    }
+
+    print none;
+
+    i = 0;
+    while i < 10 do {
+        j = 0;
+        while j < 10 do {
+            if i+j == 12 then {
+                j=j+1;
+                continue;
+            }
+            print [i,j];
+            j=j+1;
+        }
+        i=i+1;
+    }
+
+    print none;
+
+    helper();
+    helper2();
+}
+
+func helper() {
+    for i in 0..10 do {
+        for j in 0..10 do {
+            if i+j == 12 then return;
+            print [i,j];
+        }
+    }
+}
+
+func helper2() {
+    for i in 0..10 do {
+        for j in 0..10 do {
+            if i+j == 12 then if true then {{{ return; }}}
+            print [i,j];
+        }
+    }
+}

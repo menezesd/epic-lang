@@ -1,0 +1,5 @@
+func helper(a,b,c) {}
+func main() {
+    // helper must be called with exactly three args
+    helper(1,2);
+}

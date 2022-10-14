@@ -1,0 +1,74 @@
+// hello, world!
+
+///////////////////////////////////////////////
+
+func main() // main function ;)
+{
+    another();
+    ; // this is an empty statement
+    ; // it does nothing
+    ; // be careful ;)
+    printSum(2, 4);
+    x = [5, 6, [7,8]];
+    print x;
+    x[0] = 4;
+    print x;
+    x[2][1] = 3;
+    print x;
+    y = 1;
+    z = 4;
+    print [y,z];
+    {
+        // variables go out of scope only when function ends,
+        // not when the block ends
+        y = 5;
+        print [y,z];
+    }
+    print [y,z];
+    mySum(3, 4);
+    print mySum(3, 4);
+
+    some();
+    print some();
+
+    print print42();
+
+    3 + mySum(1, 2);
+    42;
+
+    some_good_variAble1 = 33;
+    print some_good_variAble1;
+    _ = 1;
+    print [_,_];
+
+    A = 1;
+    a = 2;
+    print [a,A];
+}
+
+///////////////////////////////////////////////
+
+func some() {}
+
+func print42() {
+    print 42;
+    return;
+}
+
+func mySum(x, y)
+{
+    print [100, 200, x + y];
+    return x + y;
+}
+
+func printSum(x,y) {
+    print x + y;
+}
+
+func another() {
+    print 42;
+    return;
+    print 43;
+}
+
+///////////////////////////////////////////////

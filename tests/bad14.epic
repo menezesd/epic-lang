@@ -1,0 +1,4 @@
+func main() {
+    // try to call an undeclared function
+    print undeclared();
+}
