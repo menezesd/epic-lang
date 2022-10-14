@@ -152,9 +152,8 @@ class GoatVisitor(EpicLangVisitor):
         (formal_parameters, function_body) = self.funcs[fname]
         actual_parameters = []
         if ctx.expr():
-            for param in ctx.expr():
-                ep = self.visit(param)
-                actual_parameters += [ep]
+            actual_parameters = [self.visit(param) for param in ctx.expr()]
+
         if len(actual_parameters) != len(formal_parameters):
             print ('runtime error')
             exit(0)
