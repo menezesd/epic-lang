@@ -73,7 +73,7 @@ class GoatVisitor(EpicLangVisitor):
         }
         try:
             return op[ctx.op.text](left, right)
-        except Exception:
+        except (TypeError, ValueError, ZeroDivisionError):
             print('runtime error')
             exit(0)
 
@@ -86,7 +86,7 @@ class GoatVisitor(EpicLangVisitor):
         }
         try:
             return op[ctx.op.text](self.visit(ctx.expr()))
-        except Exception:
+        except (TypeError, ValueError, ZeroDivisionError):
             print('runtime error')
             exit(0)
 
@@ -207,7 +207,7 @@ class GoatVisitor(EpicLangVisitor):
         idx = self.visit(ctx.expr()[1])
         try:
             return base[idx]
-        except Exception:
+        except (TypeError, ValueError, IndexError):
             print("runtime error")
             exit(0)
 
@@ -215,7 +215,7 @@ class GoatVisitor(EpicLangVisitor):
         var = ctx.var.text
         try:
             return self.variables[var]
-        except Exception:
+        except KeyError:
             print("runtime error")
             exit(0)
 
@@ -229,7 +229,7 @@ class GoatVisitor(EpicLangVisitor):
         rhs = self.visit(ctx.expr()[2])
         try:
             base[idx] = rhs
-        except Exception:
+        except (TypeError, ValueError, IndexError):
             print("runtime error")
             exit(0)
 
