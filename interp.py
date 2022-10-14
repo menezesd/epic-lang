@@ -161,10 +161,7 @@ class GoatVisitor(EpicLangVisitor):
         visitor = GoatVisitor(stack_frame, self.funcs)
         try:
             visitor.visit(function_body)
-        except BreakException:
-            print('runtime error')
-            exit(0)
-        except ContinueException:
+        except (BreakException, ContinueException):
             print('runtime error')
             exit(0)
         except ReturnException:
@@ -261,11 +258,9 @@ def main():
     visitor2 = GoatVisitor({}, visitor.funcs)
     try:
         visitor2.visit(visitor.funcs['main'][1])
-    except BreakException:
+    except (BreakException, ContinueException):
         print("runtime error")
         exit(0)
-    except ContinueException:
-        print("runtime error")
 
 if __name__ == "__main__":
     main()
