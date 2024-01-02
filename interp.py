@@ -169,8 +169,7 @@ class GoatVisitor(EpicLangVisitor):
         return visitor.retval
 
     def visitReturnStmt(self, ctx):
-        x = ctx.expr()
-        if x:
+        if x := ctx.expr():
             self.retval = self.visit(x)
         raise ReturnException
 
