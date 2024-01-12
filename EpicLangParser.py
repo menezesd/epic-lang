@@ -404,8 +404,7 @@ class EpicLangParser ( Parser ):
             self.match(EpicLangParser.T__2)
             self.state = 42
             self._errHandler.sync(self)
-            _la = self._input.LA(1)
-            if _la==44:
+            if (_la := self._input.LA(1))==44:
                 self.state = 34
                 self.identifier()
                 self.state = 39
@@ -833,8 +832,7 @@ class EpicLangParser ( Parser ):
         try:
             self.state = 103
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,5,self._ctx)
-            if la_ == 1:
+            if (la_ := self._interp.adaptivePredict(self._input,5,self._ctx)) == 1:
                 localctx = EpicLangParser.BlockStmtContext(self, localctx)
                 self.enterOuterAlt(localctx, 1)
                 self.state = 47
@@ -1330,8 +1328,7 @@ class EpicLangParser ( Parser ):
             self.enterOuterAlt(localctx, 1)
             self.state = 142
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,10,self._ctx)
-            if la_ == 1:
+            if (la_ := self._interp.adaptivePredict(self._input,10,self._ctx)) == 1:
                 localctx = EpicLangParser.FuncCallContext(self, localctx)
                 self._ctx = localctx
                 _prevctx = localctx
@@ -1586,8 +1583,7 @@ class EpicLangParser ( Parser ):
         if self._predicates == None:
             self._predicates = dict()
         self._predicates[5] = self.expr_sempred
-        pred = self._predicates.get(ruleIndex, None)
-        if pred is None:
+        if (pred := self._predicates.get(ruleIndex, None)) is None:
             raise Exception("No predicate with index:" + str(ruleIndex))
         else:
             return pred(localctx, predIndex)
