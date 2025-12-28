@@ -1,4 +1,4 @@
-# Generated from EpicLang.g4 by ANTLR 4.11.1
+# Generated from EpicLang.g4 by ANTLR 4.9.2
 # encoding: utf-8
 from antlr4 import *
 from io import StringIO
@@ -8,69 +8,77 @@ if sys.version_info[1] > 5:
 else:
 	from typing.io import TextIO
 
+
 def serializedATN():
-    return [
-        4,1,44,167,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,1,0,5,
-        0,14,8,0,10,0,12,0,17,9,0,1,0,1,0,1,1,1,1,5,1,23,8,1,10,1,12,1,26,
-        9,1,1,1,1,1,1,2,1,2,1,3,1,3,1,3,1,3,1,3,1,3,5,3,38,8,3,10,3,12,3,
-        41,9,3,3,3,43,8,3,1,3,1,3,1,3,1,4,1,4,1,4,1,4,1,4,1,4,1,4,1,4,1,
-        4,1,4,1,4,3,4,59,8,4,1,4,1,4,1,4,1,4,1,4,1,4,1,4,1,4,1,4,1,4,1,4,
-        1,4,1,4,1,4,1,4,1,4,1,4,1,4,1,4,1,4,1,4,1,4,1,4,1,4,1,4,1,4,1,4,
-        1,4,1,4,1,4,1,4,1,4,1,4,1,4,1,4,1,4,1,4,1,4,1,4,1,4,1,4,1,4,1,4,
-        3,4,104,8,4,1,5,1,5,1,5,1,5,1,5,1,5,5,5,112,8,5,10,5,12,5,115,9,
-        5,3,5,117,8,5,1,5,1,5,1,5,1,5,1,5,1,5,1,5,1,5,1,5,1,5,1,5,5,5,130,
-        8,5,10,5,12,5,133,9,5,3,5,135,8,5,1,5,1,5,1,5,1,5,1,5,1,5,3,5,143,
-        8,5,1,5,1,5,1,5,1,5,1,5,1,5,1,5,1,5,1,5,1,5,1,5,1,5,1,5,1,5,1,5,
-        1,5,1,5,5,5,162,8,5,10,5,12,5,165,9,5,1,5,0,1,10,6,0,2,4,6,8,10,
-        0,5,2,0,12,14,34,34,1,0,15,17,1,0,12,13,1,0,18,23,1,0,24,25,194,
-        0,15,1,0,0,0,2,20,1,0,0,0,4,29,1,0,0,0,6,31,1,0,0,0,8,103,1,0,0,
-        0,10,142,1,0,0,0,12,14,3,6,3,0,13,12,1,0,0,0,14,17,1,0,0,0,15,13,
-        1,0,0,0,15,16,1,0,0,0,16,18,1,0,0,0,17,15,1,0,0,0,18,19,5,0,0,1,
-        19,1,1,0,0,0,20,24,5,1,0,0,21,23,3,8,4,0,22,21,1,0,0,0,23,26,1,0,
-        0,0,24,22,1,0,0,0,24,25,1,0,0,0,25,27,1,0,0,0,26,24,1,0,0,0,27,28,
-        5,2,0,0,28,3,1,0,0,0,29,30,5,44,0,0,30,5,1,0,0,0,31,32,5,30,0,0,
-        32,33,5,44,0,0,33,42,5,3,0,0,34,39,3,4,2,0,35,36,5,4,0,0,36,38,3,
-        4,2,0,37,35,1,0,0,0,38,41,1,0,0,0,39,37,1,0,0,0,39,40,1,0,0,0,40,
-        43,1,0,0,0,41,39,1,0,0,0,42,34,1,0,0,0,42,43,1,0,0,0,43,44,1,0,0,
-        0,44,45,5,5,0,0,45,46,3,2,1,0,46,7,1,0,0,0,47,104,3,2,1,0,48,49,
-        5,36,0,0,49,50,3,10,5,0,50,51,5,6,0,0,51,104,1,0,0,0,52,53,5,28,
-        0,0,53,104,5,6,0,0,54,55,5,26,0,0,55,104,5,6,0,0,56,58,5,37,0,0,
-        57,59,3,10,5,0,58,57,1,0,0,0,58,59,1,0,0,0,59,60,1,0,0,0,60,104,
-        5,6,0,0,61,62,5,32,0,0,62,63,3,10,5,0,63,64,5,33,0,0,64,65,3,8,4,
-        0,65,104,1,0,0,0,66,67,5,32,0,0,67,68,3,10,5,0,68,69,5,33,0,0,69,
-        70,3,8,4,0,70,71,5,29,0,0,71,72,3,8,4,0,72,104,1,0,0,0,73,74,5,31,
-        0,0,74,75,5,44,0,0,75,76,5,7,0,0,76,77,3,10,5,0,77,78,5,8,0,0,78,
-        79,3,10,5,0,79,80,5,27,0,0,80,81,3,8,4,0,81,104,1,0,0,0,82,83,5,
-        38,0,0,83,84,3,10,5,0,84,85,5,27,0,0,85,86,3,8,4,0,86,104,1,0,0,
-        0,87,88,5,44,0,0,88,89,5,9,0,0,89,90,3,10,5,0,90,91,5,6,0,0,91,104,
-        1,0,0,0,92,93,3,10,5,0,93,94,5,10,0,0,94,95,3,10,5,0,95,96,5,11,
-        0,0,96,97,5,9,0,0,97,98,3,10,5,0,98,104,1,0,0,0,99,100,3,10,5,0,
-        100,101,5,6,0,0,101,104,1,0,0,0,102,104,5,6,0,0,103,47,1,0,0,0,103,
-        48,1,0,0,0,103,52,1,0,0,0,103,54,1,0,0,0,103,56,1,0,0,0,103,61,1,
-        0,0,0,103,66,1,0,0,0,103,73,1,0,0,0,103,82,1,0,0,0,103,87,1,0,0,
-        0,103,92,1,0,0,0,103,99,1,0,0,0,103,102,1,0,0,0,104,9,1,0,0,0,105,
-        106,6,5,-1,0,106,107,5,44,0,0,107,116,5,3,0,0,108,113,3,10,5,0,109,
-        110,5,4,0,0,110,112,3,10,5,0,111,109,1,0,0,0,112,115,1,0,0,0,113,
-        111,1,0,0,0,113,114,1,0,0,0,114,117,1,0,0,0,115,113,1,0,0,0,116,
-        108,1,0,0,0,116,117,1,0,0,0,117,118,1,0,0,0,118,143,5,5,0,0,119,
-        120,5,3,0,0,120,121,3,10,5,0,121,122,5,5,0,0,122,143,1,0,0,0,123,
-        124,7,0,0,0,124,143,3,10,5,11,125,134,5,10,0,0,126,131,3,10,5,0,
-        127,128,5,4,0,0,128,130,3,10,5,0,129,127,1,0,0,0,130,133,1,0,0,0,
-        131,129,1,0,0,0,131,132,1,0,0,0,132,135,1,0,0,0,133,131,1,0,0,0,
-        134,126,1,0,0,0,134,135,1,0,0,0,135,136,1,0,0,0,136,143,5,11,0,0,
-        137,143,5,39,0,0,138,143,5,40,0,0,139,143,5,42,0,0,140,143,5,44,
-        0,0,141,143,5,35,0,0,142,105,1,0,0,0,142,119,1,0,0,0,142,123,1,0,
-        0,0,142,125,1,0,0,0,142,137,1,0,0,0,142,138,1,0,0,0,142,139,1,0,
-        0,0,142,140,1,0,0,0,142,141,1,0,0,0,143,163,1,0,0,0,144,145,10,10,
-        0,0,145,146,7,1,0,0,146,162,3,10,5,11,147,148,10,9,0,0,148,149,7,
-        2,0,0,149,162,3,10,5,10,150,151,10,8,0,0,151,152,7,3,0,0,152,162,
-        3,10,5,9,153,154,10,7,0,0,154,155,7,4,0,0,155,162,3,10,5,8,156,157,
-        10,12,0,0,157,158,5,10,0,0,158,159,3,10,5,0,159,160,5,11,0,0,160,
-        162,1,0,0,0,161,144,1,0,0,0,161,147,1,0,0,0,161,150,1,0,0,0,161,
-        153,1,0,0,0,161,156,1,0,0,0,162,165,1,0,0,0,163,161,1,0,0,0,163,
-        164,1,0,0,0,164,11,1,0,0,0,165,163,1,0,0,0,13,15,24,39,42,58,103,
-        113,116,131,134,142,161,163
-    ]
+    with StringIO() as buf:
+        buf.write("\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3.")
+        buf.write("\u00a9\4\2\t\2\4\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7")
+        buf.write("\3\2\7\2\20\n\2\f\2\16\2\23\13\2\3\2\3\2\3\3\3\3\7\3\31")
+        buf.write("\n\3\f\3\16\3\34\13\3\3\3\3\3\3\4\3\4\3\5\3\5\3\5\3\5")
+        buf.write("\3\5\3\5\7\5(\n\5\f\5\16\5+\13\5\5\5-\n\5\3\5\3\5\3\5")
+        buf.write("\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\5\6=\n\6")
+        buf.write("\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3")
+        buf.write("\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6")
+        buf.write("\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3")
+        buf.write("\6\3\6\3\6\5\6j\n\6\3\7\3\7\3\7\3\7\3\7\3\7\7\7r\n\7\f")
+        buf.write("\7\16\7u\13\7\5\7w\n\7\3\7\3\7\3\7\3\7\3\7\3\7\3\7\3\7")
+        buf.write("\3\7\3\7\3\7\7\7\u0084\n\7\f\7\16\7\u0087\13\7\5\7\u0089")
+        buf.write("\n\7\3\7\3\7\3\7\3\7\3\7\3\7\5\7\u0091\n\7\3\7\3\7\3\7")
+        buf.write("\3\7\3\7\3\7\3\7\3\7\3\7\3\7\3\7\3\7\3\7\3\7\3\7\3\7\3")
+        buf.write("\7\7\7\u00a4\n\7\f\7\16\7\u00a7\13\7\3\7\2\3\f\b\2\4\6")
+        buf.write("\b\n\f\2\7\4\2\16\20$$\3\2\21\23\3\2\16\17\3\2\24\31\3")
+        buf.write("\2\32\33\2\u00c4\2\21\3\2\2\2\4\26\3\2\2\2\6\37\3\2\2")
+        buf.write("\2\b!\3\2\2\2\ni\3\2\2\2\f\u0090\3\2\2\2\16\20\5\b\5\2")
+        buf.write("\17\16\3\2\2\2\20\23\3\2\2\2\21\17\3\2\2\2\21\22\3\2\2")
+        buf.write("\2\22\24\3\2\2\2\23\21\3\2\2\2\24\25\7\2\2\3\25\3\3\2")
+        buf.write("\2\2\26\32\7\3\2\2\27\31\5\n\6\2\30\27\3\2\2\2\31\34\3")
+        buf.write("\2\2\2\32\30\3\2\2\2\32\33\3\2\2\2\33\35\3\2\2\2\34\32")
+        buf.write("\3\2\2\2\35\36\7\4\2\2\36\5\3\2\2\2\37 \7.\2\2 \7\3\2")
+        buf.write("\2\2!\"\7 \2\2\"#\7.\2\2#,\7\5\2\2$)\5\6\4\2%&\7\6\2\2")
+        buf.write("&(\5\6\4\2\'%\3\2\2\2(+\3\2\2\2)\'\3\2\2\2)*\3\2\2\2*")
+        buf.write("-\3\2\2\2+)\3\2\2\2,$\3\2\2\2,-\3\2\2\2-.\3\2\2\2./\7")
+        buf.write("\7\2\2/\60\5\4\3\2\60\t\3\2\2\2\61j\5\4\3\2\62\63\7&\2")
+        buf.write("\2\63\64\5\f\7\2\64\65\7\b\2\2\65j\3\2\2\2\66\67\7\36")
+        buf.write("\2\2\67j\7\b\2\289\7\34\2\29j\7\b\2\2:<\7\'\2\2;=\5\f")
+        buf.write("\7\2<;\3\2\2\2<=\3\2\2\2=>\3\2\2\2>j\7\b\2\2?@\7\"\2\2")
+        buf.write("@A\5\f\7\2AB\7#\2\2BC\5\n\6\2Cj\3\2\2\2DE\7\"\2\2EF\5")
+        buf.write("\f\7\2FG\7#\2\2GH\5\n\6\2HI\7\37\2\2IJ\5\n\6\2Jj\3\2\2")
+        buf.write("\2KL\7!\2\2LM\7.\2\2MN\7\t\2\2NO\5\f\7\2OP\7\n\2\2PQ\5")
+        buf.write("\f\7\2QR\7\35\2\2RS\5\n\6\2Sj\3\2\2\2TU\7(\2\2UV\5\f\7")
+        buf.write("\2VW\7\35\2\2WX\5\n\6\2Xj\3\2\2\2YZ\7.\2\2Z[\7\13\2\2")
+        buf.write("[\\\5\f\7\2\\]\7\b\2\2]j\3\2\2\2^_\5\f\7\2_`\7\f\2\2`")
+        buf.write("a\5\f\7\2ab\7\r\2\2bc\7\13\2\2cd\5\f\7\2dj\3\2\2\2ef\5")
+        buf.write("\f\7\2fg\7\b\2\2gj\3\2\2\2hj\7\b\2\2i\61\3\2\2\2i\62\3")
+        buf.write("\2\2\2i\66\3\2\2\2i8\3\2\2\2i:\3\2\2\2i?\3\2\2\2iD\3\2")
+        buf.write("\2\2iK\3\2\2\2iT\3\2\2\2iY\3\2\2\2i^\3\2\2\2ie\3\2\2\2")
+        buf.write("ih\3\2\2\2j\13\3\2\2\2kl\b\7\1\2lm\7.\2\2mv\7\5\2\2ns")
+        buf.write("\5\f\7\2op\7\6\2\2pr\5\f\7\2qo\3\2\2\2ru\3\2\2\2sq\3\2")
+        buf.write("\2\2st\3\2\2\2tw\3\2\2\2us\3\2\2\2vn\3\2\2\2vw\3\2\2\2")
+        buf.write("wx\3\2\2\2x\u0091\7\7\2\2yz\7\5\2\2z{\5\f\7\2{|\7\7\2")
+        buf.write("\2|\u0091\3\2\2\2}~\t\2\2\2~\u0091\5\f\7\r\177\u0088\7")
+        buf.write("\f\2\2\u0080\u0085\5\f\7\2\u0081\u0082\7\6\2\2\u0082\u0084")
+        buf.write("\5\f\7\2\u0083\u0081\3\2\2\2\u0084\u0087\3\2\2\2\u0085")
+        buf.write("\u0083\3\2\2\2\u0085\u0086\3\2\2\2\u0086\u0089\3\2\2\2")
+        buf.write("\u0087\u0085\3\2\2\2\u0088\u0080\3\2\2\2\u0088\u0089\3")
+        buf.write("\2\2\2\u0089\u008a\3\2\2\2\u008a\u0091\7\r\2\2\u008b\u0091")
+        buf.write("\7)\2\2\u008c\u0091\7*\2\2\u008d\u0091\7,\2\2\u008e\u0091")
+        buf.write("\7.\2\2\u008f\u0091\7%\2\2\u0090k\3\2\2\2\u0090y\3\2\2")
+        buf.write("\2\u0090}\3\2\2\2\u0090\177\3\2\2\2\u0090\u008b\3\2\2")
+        buf.write("\2\u0090\u008c\3\2\2\2\u0090\u008d\3\2\2\2\u0090\u008e")
+        buf.write("\3\2\2\2\u0090\u008f\3\2\2\2\u0091\u00a5\3\2\2\2\u0092")
+        buf.write("\u0093\f\f\2\2\u0093\u0094\t\3\2\2\u0094\u00a4\5\f\7\r")
+        buf.write("\u0095\u0096\f\13\2\2\u0096\u0097\t\4\2\2\u0097\u00a4")
+        buf.write("\5\f\7\f\u0098\u0099\f\n\2\2\u0099\u009a\t\5\2\2\u009a")
+        buf.write("\u00a4\5\f\7\13\u009b\u009c\f\t\2\2\u009c\u009d\t\6\2")
+        buf.write("\2\u009d\u00a4\5\f\7\n\u009e\u009f\f\16\2\2\u009f\u00a0")
+        buf.write("\7\f\2\2\u00a0\u00a1\5\f\7\2\u00a1\u00a2\7\r\2\2\u00a2")
+        buf.write("\u00a4\3\2\2\2\u00a3\u0092\3\2\2\2\u00a3\u0095\3\2\2\2")
+        buf.write("\u00a3\u0098\3\2\2\2\u00a3\u009b\3\2\2\2\u00a3\u009e\3")
+        buf.write("\2\2\2\u00a4\u00a7\3\2\2\2\u00a5\u00a3\3\2\2\2\u00a5\u00a6")
+        buf.write("\3\2\2\2\u00a6\r\3\2\2\2\u00a7\u00a5\3\2\2\2\17\21\32")
+        buf.write("),<isv\u0085\u0088\u0090\u00a3\u00a5")
+        return buf.getvalue()
+
 
 class EpicLangParser ( Parser ):
 
@@ -159,7 +167,7 @@ class EpicLangParser ( Parser ):
 
     def __init__(self, input:TokenStream, output:TextIO = sys.stdout):
         super().__init__(input, output)
-        self.checkVersion("4.11.1")
+        self.checkVersion("4.9.2")
         self._interp = ParserATNSimulator(self, self.atn, self.decisionsToDFA, self.sharedContextCache)
         self._predicates = None
 
@@ -213,7 +221,7 @@ class EpicLangParser ( Parser ):
             self.state = 15
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==30:
+            while _la==EpicLangParser.Func:
                 self.state = 12
                 self.functionDecl()
                 self.state = 17
@@ -277,7 +285,7 @@ class EpicLangParser ( Parser ):
             self.state = 24
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while ((_la) & ~0x3f) == 0 and ((1 << _la) & 24178853966922) != 0:
+            while (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << EpicLangParser.T__0) | (1 << EpicLangParser.T__2) | (1 << EpicLangParser.T__5) | (1 << EpicLangParser.T__9) | (1 << EpicLangParser.T__11) | (1 << EpicLangParser.T__12) | (1 << EpicLangParser.T__13) | (1 << EpicLangParser.Break) | (1 << EpicLangParser.Continue) | (1 << EpicLangParser.For) | (1 << EpicLangParser.If) | (1 << EpicLangParser.Len) | (1 << EpicLangParser.NoneObj) | (1 << EpicLangParser.Print) | (1 << EpicLangParser.Return) | (1 << EpicLangParser.While) | (1 << EpicLangParser.TrueLiteral) | (1 << EpicLangParser.FalseLiteral) | (1 << EpicLangParser.NUMBER) | (1 << EpicLangParser.VARIABLE))) != 0):
                 self.state = 21
                 self.stmt()
                 self.state = 26
@@ -404,13 +412,14 @@ class EpicLangParser ( Parser ):
             self.match(EpicLangParser.T__2)
             self.state = 42
             self._errHandler.sync(self)
-            if (_la := self._input.LA(1))==44:
+            _la = self._input.LA(1)
+            if _la==EpicLangParser.VARIABLE:
                 self.state = 34
                 self.identifier()
                 self.state = 39
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                while _la==4:
+                while _la==EpicLangParser.T__3:
                     self.state = 35
                     self.match(EpicLangParser.T__3)
                     self.state = 36
@@ -832,7 +841,8 @@ class EpicLangParser ( Parser ):
         try:
             self.state = 103
             self._errHandler.sync(self)
-            if (la_ := self._interp.adaptivePredict(self._input,5,self._ctx)) == 1:
+            la_ = self._interp.adaptivePredict(self._input,5,self._ctx)
+            if la_ == 1:
                 localctx = EpicLangParser.BlockStmtContext(self, localctx)
                 self.enterOuterAlt(localctx, 1)
                 self.state = 47
@@ -876,7 +886,7 @@ class EpicLangParser ( Parser ):
                 self.state = 58
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if ((_la) & ~0x3f) == 0 and ((1 << _la) & 23691039634440) != 0:
+                if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << EpicLangParser.T__2) | (1 << EpicLangParser.T__9) | (1 << EpicLangParser.T__11) | (1 << EpicLangParser.T__12) | (1 << EpicLangParser.T__13) | (1 << EpicLangParser.Len) | (1 << EpicLangParser.NoneObj) | (1 << EpicLangParser.TrueLiteral) | (1 << EpicLangParser.FalseLiteral) | (1 << EpicLangParser.NUMBER) | (1 << EpicLangParser.VARIABLE))) != 0):
                     self.state = 57
                     self.expr(0)
 
@@ -1328,7 +1338,8 @@ class EpicLangParser ( Parser ):
             self.enterOuterAlt(localctx, 1)
             self.state = 142
             self._errHandler.sync(self)
-            if (la_ := self._interp.adaptivePredict(self._input,10,self._ctx)) == 1:
+            la_ = self._interp.adaptivePredict(self._input,10,self._ctx)
+            if la_ == 1:
                 localctx = EpicLangParser.FuncCallContext(self, localctx)
                 self._ctx = localctx
                 _prevctx = localctx
@@ -1341,13 +1352,13 @@ class EpicLangParser ( Parser ):
                 self.state = 116
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if ((_la) & ~0x3f) == 0 and ((1 << _la) & 23691039634440) != 0:
+                if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << EpicLangParser.T__2) | (1 << EpicLangParser.T__9) | (1 << EpicLangParser.T__11) | (1 << EpicLangParser.T__12) | (1 << EpicLangParser.T__13) | (1 << EpicLangParser.Len) | (1 << EpicLangParser.NoneObj) | (1 << EpicLangParser.TrueLiteral) | (1 << EpicLangParser.FalseLiteral) | (1 << EpicLangParser.NUMBER) | (1 << EpicLangParser.VARIABLE))) != 0):
                     self.state = 108
                     self.expr(0)
                     self.state = 113
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    while _la==4:
+                    while _la==EpicLangParser.T__3:
                         self.state = 109
                         self.match(EpicLangParser.T__3)
                         self.state = 110
@@ -1381,7 +1392,7 @@ class EpicLangParser ( Parser ):
                 self.state = 123
                 localctx.op = self._input.LT(1)
                 _la = self._input.LA(1)
-                if not(((_la) & ~0x3f) == 0 and ((1 << _la) & 17179897856) != 0):
+                if not((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << EpicLangParser.T__11) | (1 << EpicLangParser.T__12) | (1 << EpicLangParser.T__13) | (1 << EpicLangParser.Len))) != 0)):
                     localctx.op = self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
@@ -1399,13 +1410,13 @@ class EpicLangParser ( Parser ):
                 self.state = 134
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if ((_la) & ~0x3f) == 0 and ((1 << _la) & 23691039634440) != 0:
+                if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << EpicLangParser.T__2) | (1 << EpicLangParser.T__9) | (1 << EpicLangParser.T__11) | (1 << EpicLangParser.T__12) | (1 << EpicLangParser.T__13) | (1 << EpicLangParser.Len) | (1 << EpicLangParser.NoneObj) | (1 << EpicLangParser.TrueLiteral) | (1 << EpicLangParser.FalseLiteral) | (1 << EpicLangParser.NUMBER) | (1 << EpicLangParser.VARIABLE))) != 0):
                     self.state = 126
                     self.expr(0)
                     self.state = 131
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    while _la==4:
+                    while _la==EpicLangParser.T__3:
                         self.state = 127
                         self.match(EpicLangParser.T__3)
                         self.state = 128
@@ -1483,7 +1494,7 @@ class EpicLangParser ( Parser ):
                         self.state = 145
                         localctx.op = self._input.LT(1)
                         _la = self._input.LA(1)
-                        if not(((_la) & ~0x3f) == 0 and ((1 << _la) & 229376) != 0):
+                        if not((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << EpicLangParser.T__14) | (1 << EpicLangParser.T__15) | (1 << EpicLangParser.T__16))) != 0)):
                             localctx.op = self._errHandler.recoverInline(self)
                         else:
                             self._errHandler.reportMatch(self)
@@ -1502,7 +1513,7 @@ class EpicLangParser ( Parser ):
                         self.state = 148
                         localctx.op = self._input.LT(1)
                         _la = self._input.LA(1)
-                        if not(_la==12 or _la==13):
+                        if not(_la==EpicLangParser.T__11 or _la==EpicLangParser.T__12):
                             localctx.op = self._errHandler.recoverInline(self)
                         else:
                             self._errHandler.reportMatch(self)
@@ -1521,7 +1532,7 @@ class EpicLangParser ( Parser ):
                         self.state = 151
                         localctx.op = self._input.LT(1)
                         _la = self._input.LA(1)
-                        if not(((_la) & ~0x3f) == 0 and ((1 << _la) & 16515072) != 0):
+                        if not((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << EpicLangParser.T__17) | (1 << EpicLangParser.T__18) | (1 << EpicLangParser.T__19) | (1 << EpicLangParser.T__20) | (1 << EpicLangParser.T__21) | (1 << EpicLangParser.T__22))) != 0)):
                             localctx.op = self._errHandler.recoverInline(self)
                         else:
                             self._errHandler.reportMatch(self)
@@ -1540,7 +1551,7 @@ class EpicLangParser ( Parser ):
                         self.state = 154
                         localctx.op = self._input.LT(1)
                         _la = self._input.LA(1)
-                        if not(_la==24 or _la==25):
+                        if not(_la==EpicLangParser.T__23 or _la==EpicLangParser.T__24):
                             localctx.op = self._errHandler.recoverInline(self)
                         else:
                             self._errHandler.reportMatch(self)
@@ -1583,7 +1594,8 @@ class EpicLangParser ( Parser ):
         if self._predicates == None:
             self._predicates = dict()
         self._predicates[5] = self.expr_sempred
-        if (pred := self._predicates.get(ruleIndex, None)) is None:
+        pred = self._predicates.get(ruleIndex, None)
+        if pred is None:
             raise Exception("No predicate with index:" + str(ruleIndex))
         else:
             return pred(localctx, predIndex)

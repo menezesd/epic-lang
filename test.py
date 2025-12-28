@@ -18,10 +18,13 @@ def main() -> NoReturn:
         with open(output_path) as f:
             jury_ans: str = f.read().rstrip()
         try:
-            got_ans: str = subprocess.check_output(['python3', 'interp.py', input_path], universal_newlines=True).rstrip()
+            got_ans: str = subprocess.check_output(
+                ['python3', 'interp.py', input_path],
+                universal_newlines=True,
+                stderr=subprocess.STDOUT
+            ).rstrip()
         except subprocess.CalledProcessError as e:
-            print('process finished badly: ' + str(e))
-            got_ans = ''
+            got_ans = (e.output or '').rstrip()
         if jury_ans == got_ans:
             print('test passed :)')
             passed += 1
