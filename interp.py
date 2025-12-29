@@ -271,13 +271,19 @@ def main() -> None:
             except (TypeError, ValueError, IndexError):
                 self.runtime_error()
 
-    # Input validation
-    if len(sys.argv) < 2:
-        print(f"Usage: {sys.argv[0]} <source_file>")
+    # Input validation and argument parsing
+    args = sys.argv[1:]
+    use_analyze = '--analyze' in args
+    source_files = [a for a in args if not a.startswith('--')]
+
+    if len(source_files) < 1:
+        print(f"Usage: {sys.argv[0]} [--analyze] <source_file>")
         sys.exit(1)
 
+    source_file = source_files[0]
+
     # create input stream
-    in_stream = FileStream(sys.argv[1])
+    in_stream = FileStream(source_file)
 
     # create a lexer
     lexer = EpicLangLexer(in_stream)
@@ -295,17 +301,25 @@ def main() -> None:
     # use the parser to obtain an abstract syntax tree
     tree = parser.program()
 
-    func_table = FunctionTableBuilder()
-    func_table.visit(tree)
-    if ('main' not in func_table.funcs) or (func_table.funcs['main'][0]):
-        print(RUNTIME_ERROR_MSG)
-        sys.exit(1)
-    interpreter = InterpreterVisitor({}, func_table.funcs)
-    try:
-        interpreter.visit(func_table.funcs['main'][1])
-    except (BreakException, ContinueException):
-        print(RUNTIME_ERROR_MSG)
-        sys.exit(1)
+    if use_analyze:
+        # Analyzing evaluator (SICP-style)
+        from analyze import Analyzer
+        analyzer = Analyzer()
+        analyzer.analyze(tree)
+        analyzer.run()
+    else:
+        # Tree-walking interpreter (original behavior)
+        func_table = FunctionTableBuilder()
+        func_table.visit(tree)
+        if ('main' not in func_table.funcs) or (func_table.funcs['main'][0]):
+            print(RUNTIME_ERROR_MSG)
+            sys.exit(1)
+        interpreter = InterpreterVisitor({}, func_table.funcs)
+        try:
+            interpreter.visit(func_table.funcs['main'][1])
+        except (BreakException, ContinueException):
+            print(RUNTIME_ERROR_MSG)
+            sys.exit(1)
 
 
 if __name__ == "__main__":

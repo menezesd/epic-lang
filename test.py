@@ -1,4 +1,3 @@
-total = 0
 import subprocess
 import os
 import sys
@@ -6,6 +5,18 @@ from typing import NoReturn
 
 def main() -> NoReturn:
     """Run all .epic tests in the tests directory and compare output."""
+    # Check for mode flags
+    use_analyze = '--analyze' in sys.argv
+
+    if use_analyze:
+        mode_name = "analyzing"
+        mode_flag = '--analyze'
+    else:
+        mode_name = "tree-walking"
+        mode_flag = None
+
+    print(f"Running tests in {mode_name} mode...")
+
     total: int = 0
     passed: int = 0
     for file in sorted(os.listdir('tests')):
@@ -18,8 +29,12 @@ def main() -> NoReturn:
         with open(output_path) as f:
             jury_ans: str = f.read().rstrip()
         try:
+            cmd = ['python3', 'interp.py']
+            if mode_flag:
+                cmd.append(mode_flag)
+            cmd.append(input_path)
             got_ans: str = subprocess.check_output(
-                ['python3', 'interp.py', input_path],
+                cmd,
                 universal_newlines=True,
                 stderr=subprocess.STDOUT
             ).rstrip()
