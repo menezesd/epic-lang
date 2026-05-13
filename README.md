@@ -203,3 +203,13 @@ To run the tests, use the following command:
 ```
 python3 test.py
 ```
+
+## Rust interpreter
+
+This repository also contains a standalone Rust interpreter for the same language.
+
+```
+cargo run -- tests/fib.epic
+cargo run -- --analyze tests/fib.epic
+cargo test
+```
